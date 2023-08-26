@@ -2,7 +2,7 @@ def find_peak_greedy(matrix):
     '''
     Find the 2-D peak element in a matrix using the greedy approach, assuming it exists.
 
-    Args:
+    @param:
         matrix (List[List[int]]): A 2D list denoting a matrix.
 
     Returns:
