@@ -5,11 +5,12 @@ import algorithms
 import json
 import utils
 
+
 ################################################################################
 ################################ The Main Method ###############################
 ################################################################################
 
-def loadProblem(file = "problem.py", variable = "problemMatrix"):
+def loadProblem(file="problem.py", variable="problemMatrix"):
     """
     Loads a matrix from a python file, and constructs a PeakProblem from it.
     """
@@ -18,6 +19,7 @@ def loadProblem(file = "problem.py", variable = "problemMatrix"):
     with open(file) as handle:
         exec(handle.read(), namespace)
     return peak.createProblem(namespace[variable])
+
 
 def main():
     if len(sys.argv) > 1:
@@ -33,12 +35,12 @@ def main():
                      ("Algorithm 4", algorithms.algorithm4)]
 
     steps = []
-    
+
     for (name, function) in algorithmList:
         tracer = trace.TraceRecord()
-        peak = function(problem, trace = tracer)
+        peak = function(problem, trace=tracer)
         steps.append(tracer.sequence)
-        
+
         status = "is NOT a peak (INCORRECT!)"
         if problem.isPeak(peak):
             status = "is a peak"
@@ -50,11 +52,12 @@ def main():
         traceFile.write("parse(")
 
         json.dump({
-            "input" : problem.array,
-            "steps" : steps
+            "input": problem.array,
+            "steps": steps
         }, traceFile)
 
         traceFile.write(")")
+
 
 if __name__ == "__main__":
     main()
