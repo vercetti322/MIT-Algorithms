@@ -1,0 +1,25 @@
+Solution to problem_Set 1
+
+Problem 1-1 (O notation) :
+
+(a) Group 1 -> f_3(n) > f_4(n) > f_1(n) > f_2(n)
+
+(b) Group 2 -> f_2(n) > f_3(n) > f_4(n) > f_1(n)
+
+(c) Group 3 -> f_1(n) > f_3(n) > f_2(n) > f_4(n)
+
+Problem 1-2 (Recurrence relations) :
+
+(a) O(n)
+
+(b) O(n*log(n))
+
+(c) O(2^n)
+
+Problem 1-3 (Peak finding)
+
+(a) Algorithm 1 is correct
+
+(b) Algorithm 2 is correct
+
+(c)
